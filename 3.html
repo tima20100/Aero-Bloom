@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AeroBloom — Урбан-садайництво з дронами</title>
+<link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+<header>
+  <div class="logo">AeroBloom</div>
+
+  <!-- Desktop navigation -->
+  <nav class="desktop-nav">
+    <a href="#about">Про нас</a>
+    <a href="#services">Послуги</a>
+    <a href="#team">Команда</a>
+    <a href="#gallery">Галерея</a>
+    <a class="btn" href="#contact">Зв'язатися</a>
+  </nav>
+
+  <!-- Burger button -->
+  <div class="burger" id="burgerBtn">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- MOBILE SLIDE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-inner">
+    <a href="#about" onclick="closeMenu()">Про нас</a>
+    <a href="#services" onclick="closeMenu()">Послуги</a>
+    <a href="#team" onclick="closeMenu()">Команда</a>
+    <a href="#gallery" onclick="closeMenu()">Галерея</a>
+    <a class="btn" href="#contact" onclick="closeMenu()">Зв'язатися</a>
+  </div>
+</div>
+
+<main>
+  <section class="hero">
+    <div>
+      <h1>Автоматизовані дрони для вирощування свіжої зелені у місті</h1>
+      <p>AeroBloom розробляє модульні міські грядки та літаючі дрони-асистенти. Від поливу до збору врожаю — екологічно та ефективно.</p>
+      <div class="btn-group">
+        <a class="btn" href="#services">Наші рішення</a>
+        <a class="btn" href="#about" style="background:white;color:var(--green-dark)">Дізнатись більше</a>
+      </div>
+    </div>
+    <img src="depositphotos_48831999-stock-photo-fresh-green-leaves-with-drops.jpg" class="card" style="width:400px;height:auto;border-radius:14px;">
+  </section>
+
+  <section id="services">
+    <h2>Наші послуги</h2>
+    <div class="features">
+      <div class="card" onclick="toggleCard(this)">
+        <strong>Модульні грядки</strong>
+        <div class="card-content">
+          <img src="модульні грядки.jpg">
+          <p class="muted">Компактні системи для балконів та терас, легко встановлюються.</p>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <strong>Дрони-агрономи</strong>
+        <div class="card-content">
+          <img src="дрони агрономи.jpg">
+          <p class="muted">Мікродрони з сенсорами вологості та камерою, без хімії.</p>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <strong>Підписка на насіння</strong>
+        <div class="card-content">
+          <img src="насіння.jpg">
+          <p class="muted">Щомісячні набори з адаптованими сортами для вашого регіону.</p>
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <strong>Аналітика росту</strong>
+        <div class="card-content">
+          <img src="аналітика росту.jpg">
+          <p class="muted">Дані про ріст рослин у реальному часі з порадами через додаток.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Наша команда</h2>
+    <div class="team-grid">
+      <div class="team-member" onclick="toggleMember(this)">
+        <div class="avatar">AK</div>
+        <div style="font-weight:700;margin-top:8px">Анна Карпова</div>
+        <div class="muted member-content">Агроном, відповідає за налаштування грядок і контроль росту рослин.</div>
+      </div>
+      <div class="team-member" onclick="toggleMember(this)">
+        <div class="avatar">IV</div>
+        <div style="font-weight:700;margin-top:8px">Іван Воронов</div>
+        <div class="muted member-content">Інженер дронів, забезпечує роботу автоматизованих асистентів.</div>
+      </div>
+      <div class="team-member" onclick="toggleMember(this)">
+        <div class="avatar">ML</div>
+        <div style="font-weight:700;margin-top:8px">Марія Левченко</div>
+        <div class="muted member-content">Продукт-дизайнер, розробляє UI та інтерактивні панелі для користувачів.</div>
+      </div>
+      <div class="team-member" onclick="toggleMember(this)">
+        <div class="avatar">DS</div>
+        <div style="font-weight:700;margin-top:8px">Дмитро Сергієнко</div>
+        <div class="muted member-content">Програміст, відповідає за бекенд та аналітику даних.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Галерея проектів</h2>
+    <div class="gallery">
+      <div class="gallery-item" onclick="toggleCard(this)">
+        <img src="балкон.jpg" alt="">
+        <div class="desc">Міська ферма на балконі — проект для житлового будинку.</div>
+      </div>
+      <div class="gallery-item" onclick="toggleCard(this)">
+        <img src="сад 3.jpg" alt="">
+        <div class="desc">Гарний сад наших працівників.</div>
+      </div>
+      <div class="gallery-item" onclick="toggleCard(this)">
+        <img src="кафе.jpg" alt="">
+        <div class="desc">Модульні грядки в кафе для вирощування свіжої зелені.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Зв'язатися</h2>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <div class="card1" style="flex:1;min-width:280px;">
+        <form onsubmit="handleSubmit(event)">
+          <label>Ім'я<input type="text" id="name" required placeholder="Ваше ім'я"></label>
+          <label>Email<input type="email" id="email" required placeholder="email@example.com"></label>
+          <label>Повідомлення<textarea id="message" required placeholder="Коротко опишіть запит"></textarea></label>
+          <button class="btn" type="submit">Відправити</button>
+          <p id="formStatus" class="muted" style="margin-top:8px"></p>
+        </form>
+      </div>
+      <div class="card1" style="flex:1;min-width:280px;">
+        <h3>Офіс</h3>
+        <p class="muted">Вул. Садова, 12, Київ, Україна</p>
+        <h3>Графік</h3>
+        <p class="muted">Пн—Пт 9:00–18:00</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 AeroBloom — усі права захищено
+</footer>
+
+<script>
+function toggleCard(el){ el.classList.toggle('open'); }
+function toggleMember(el){ el.classList.toggle('open'); }
+
+function handleSubmit(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const msg=document.getElementById('message').value.trim();
+  const status=document.getElementById('formStatus');
+  if(!name||!email||!msg){status.textContent='Будь ласка, заповніть всі поля.';return;}
+  status.textContent='Дякуємо! Ваше повідомлення надіслано.';
+  e.target.reset();
+}
+
+// Animate sections on scroll
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('section').forEach(sec=>{
+    const top=sec.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){sec.classList.add('visible');}
+  });
+});
+
+const burger = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+
+// Закриття меню при кліку по пункту
+function closeMenu(){
+  burger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+
+
+
+</script>
+</body>
+</html>
